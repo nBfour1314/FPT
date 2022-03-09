@@ -65,7 +65,7 @@
                 <!-- nav -->
                 <nav class="py-4">
                     <div id="logo">
-                        <img style="height: 50px;" src="~/Assets/images/img-decord/Logo.png" alt="FPTBOOKSTORE_logo">
+                        <a href="@Url.Action("Index","Home")"><img style="height: 50px;" src="~/Assets/images/img-decord/Logo.png" alt="FPTBOOKSTORE_logo"></a>
                     </div>
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop" />
@@ -74,26 +74,26 @@
                         {
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Help", "Help", "Home")</li>
                             <li>@Html.ActionLink($"✌{Session["UserName"]} ", "EditInfor", "Account")</li>
                             <li>@Html.ActionLink("Log out", "Log_out", "Account")</li>
-                            <li>@Html.ActionLink("Helps", "Help", "Home")</li>
                             <li>
-                                <a href="@Url.Action("Index", "Cart")" >
+                                <a href="@Url.Action("Index", "Cart")">
                                     <span class="glyphicon glyphicon-shopping-cart" style="color:green">
-                                        </span>Cart 
+                                    </span>Cart
                                     <span class="badge">(@Session["count"])</span>
                                 </a>
                             </li>
                         }
-                        else 
+                        else
                         {
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Help", "Help", "Home")</li>
                             <li>@Html.ActionLink("Login", "Log_in", "Account")</li>
                             <li>@Html.ActionLink("Register", "Register", "Account")</li>
-                            <li>@Html.ActionLink("Helps", "Help", "Home")</li>
                             <li>
-                                @Html.ActionLink("Cart","Index","Cart")
+                                @Html.ActionLink("Cart", "Index", "Cart")
                             </li>
                         }
                     </ul>
@@ -105,15 +105,12 @@
         <!--/banner-->
         <div class="banner-info">
             <h3 class="mb-4">FPT BookStore</h3>
-            <p>One of the biggest bookstore chain of the world.</p>
         </div>
-        <!--// banner-inner -->
-
     </div>
 
     <!--//main-content-->
     @RenderBody()
-    <!-- Renderbody over here! -->
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -121,13 +118,12 @@
                 <div class="col-lg-4 footer-grid_section_w3layouts">
                     <h2 class="logo-2 mb-lg-4 mb-3">
                         <div id="logo">
-                            <img style="height: 50px;" src="~/Assets/images/img-decord/Logo.png" alt="FPTBOOKSTORE_logo" href="@Url.Action("Index","Home")">
+                            <a href="@Url.Action("Index","Home")"><img style="height: 50px;" src="~/Assets/images/img-decord/Logo.png" alt="FPTBOOKSTORE_logo"></a>
                         </div>
                     </h2>
                     <br/>
                     <br/>
-                    <p>FPT Bookstore, which has been in business since 2001, is a well-known and well-known bookstore chain that distributes books and stationery through approximately 50 contemporary bookstores around the country. Moreover, FPT Bookstore publishes thousands of high-quality, copyrighted books from recognized local and international publishers.</p>
-
+                    <p>Operating since 2001, FPT Bookstore is a reputable and familiar bookstore system that distributes books and stationery through nearly 50 modern bookstores nationwide. In addition, FPT Bookstore also publishes thousands of quality and copyrighted books from reputable domestic and foreign suppliers. <br>A rich product list, many exclusive products, carefully selected have made the difference of FPT Bookstore and built the trust and love of customers.</p>
                 </div>
                 <div class="col-lg-8 footer-right">
                     <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
@@ -138,7 +134,7 @@
                                     <a href="@Url.Action("Index","Home")">Home</a>
                                 </li>
                                 <li class="mt-3">
-                                    <a href="@Url.Action("About","Home")">About Us</a>
+                                    <a href="@Url.Action("About","Home")">About</a>
                                 </li>
                                 <li class="mt-3">
                                     <a href="@Url.Action("Help","Home")">Helps</a>
@@ -147,7 +143,7 @@
                         </div>
 
                         <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Contact Info</h3>
+                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Contact</h3>
                             <div class="contact-info">
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Phone</h4>
@@ -159,14 +155,14 @@
                                 </div>
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Location</h4>
-                                    <p>An Phu ward, Ninh Kieu district, Can Tho city, VietNam.</p>
+                                    <p>160, 30/4 Street,An Phu Ward, Ninh Kieu District, Can Tho City, Vietnam.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="cpy-right text-left row">
                         <p class="col-md-10">
-                            © 2022 FPT BookStore. All rights reserved | Design by Nguyen Nhat Hao.
+                            © 2022 FPT Bookstore Application. All rights reserved | Design by Team GCC0802 + 9.
                         </p>
                         <!-- move top icon -->
                         <a href="#home" class="move-top text-right col-md-2"><span class="fa fa-long-arrow-up" aria-hidden="true"></span></a>

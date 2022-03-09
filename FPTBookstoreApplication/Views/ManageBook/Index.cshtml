@@ -63,7 +63,7 @@
                 @Html.DisplayFor(modelItem => item.Category.CategoryName)
             </td>
             <td>
-                @Html.ActionLink("EditInfor", "EditBook", new { id = item.BookId }) 
+                @Html.ActionLink("Edit", "EditBook", new { id = item.BookId }) 
                 @Html.ActionLink("Delete", "DeleteBook", new { id = item.BookId }, new { onclick = $"return confirm('Are you sure to detele book:{item.BookName}?')" })
             </td>
         </tr>

@@ -74,6 +74,7 @@ namespace FPTBookstoreApplication.Controllers
                 tmp.PublisherName = obj.PublisherName;
                 tmp.Description = obj.Description;
             }
+                
             db.SaveChanges();
             return RedirectToAction("Index", "ManagePublisher");
         }

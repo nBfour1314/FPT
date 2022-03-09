@@ -70,13 +70,13 @@ namespace FPTBookstoreApplication.Controllers
         public ActionResult EditAuthor(Author obj)
         {
             Author tmp = db.Authors.ToList().Find(x => x.AuthorId == obj.AuthorId);
-              if (tmp != null) 
-                {
-                    tmp.AuthorName= obj.AuthorName;
-                    tmp.Description = obj.Description;
+            if (tmp != null) 
+            {
+                tmp.AuthorName= obj.AuthorName;
+                tmp.Description = obj.Description;
             }
-                db.SaveChanges();
-                return RedirectToAction("Index", "ManageAuthor");
+            db.SaveChanges();
+            return RedirectToAction("Index", "ManageAuthor");
         }
 
         public ActionResult DeleteAuthor(int? id)
