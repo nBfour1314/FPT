@@ -2,6 +2,7 @@
 using FPTBookstoreApplication.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -68,12 +69,13 @@ namespace FPTBookstoreApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditCategory(Category obj)
         {
-            Category tmp = db.Categories.ToList().Find(x => x.CategoryId == obj.CategoryId);
+            Category tmp = db.Categories.Find(obj.CategoryId);
             if (tmp != null)
             {
                 tmp.CategoryName = obj.CategoryName;
                 tmp.Description = obj.Description;
             }
+            db.Entry(obj).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index", "ManageCategory");
         }

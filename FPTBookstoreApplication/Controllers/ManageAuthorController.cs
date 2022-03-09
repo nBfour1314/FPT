@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace FPTBookstoreApplication.Controllers
 {
+
     public class ManageAuthorController : Controller
     {
         // GET: ManageAuthor
@@ -24,7 +25,6 @@ namespace FPTBookstoreApplication.Controllers
                 return RedirectToAction("Log_in", "Account");
             }
         }
-
 
         public ActionResult AddAuthor()
         {
