@@ -19,7 +19,6 @@
         <div class="login-items">
 
             <div class="username-password-items">
-                @Html.HiddenFor(m => m.CategoryId)
 
                 <p>@Html.LabelFor(m => m.CategoryName, new { @class = "header-input-item" })</p>
                 @Html.TextBoxFor(m => m.CategoryName, new { @class = "input-item" })
