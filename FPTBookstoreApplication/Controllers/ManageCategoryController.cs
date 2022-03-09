@@ -75,7 +75,6 @@ namespace FPTBookstoreApplication.Controllers
                 tmp.CategoryName = obj.CategoryName;
                 tmp.Description = obj.Description;
             }
-            db.Entry(obj).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index", "ManageCategory");
         }

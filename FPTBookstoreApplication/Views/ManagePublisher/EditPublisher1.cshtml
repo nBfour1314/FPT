@@ -20,6 +20,7 @@
         <div class="login-items">
 
             <div class="username-password-items">
+
                 <p>@Html.LabelFor(m => m.PublisherName, new { @class = "header-input-item" })</p>
                 @Html.TextBoxFor(m => m.PublisherName, new { @class = "input-item" })
                 @Html.ValidationMessageFor(model => model.PublisherName, "", new { @class = "text-danger" })

@@ -53,6 +53,10 @@
                 @Html.DropDownList("AuthorId", null, htmlAttributes: new { @class = "input-item" })
                 @Html.ValidationMessageFor(model => model.AuthorId, "", new { @class = "text-danger" })
 
+                <p>  @Html.LabelFor(model => model.PublisherId, "Publisher's Name", htmlAttributes: new { @class = "header-input-item" })</p>
+                @Html.DropDownList("PublisherId", null, htmlAttributes: new { @class = "input-item" })
+                @Html.ValidationMessageFor(model => model.PublisherId, "", new { @class = "text-danger" })
+
 
                 <p>  @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "header-input-item" })</p>
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "input-item" } })

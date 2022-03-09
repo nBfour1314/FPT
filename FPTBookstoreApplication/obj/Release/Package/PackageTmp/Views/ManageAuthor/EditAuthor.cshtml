@@ -19,14 +19,21 @@
         <div class="login-items">
 
             <div class="username-password-items">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 @Html.HiddenFor(model => model.AuthorId)
 
                 <p>@Html.LabelFor(model => model.AuthorName, htmlAttributes: new { @class = "header-input-item" })</p>
                 @Html.EditorFor(model => model.AuthorName, new { htmlAttributes = new { @class = "input-item" } })
                 @Html.ValidationMessageFor(model => model.AuthorName, "", new { @class = "text-danger" })
+
+                <div class="username-password-items">
+                    <p>@Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "header-input-item" })</p>
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "input-item" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
             </div>
             <div style="margin-bottom:5%;" class="btn-item">
-                <button type="submit" class="submit-btn1">Update Information</button>
+                <button type="submit" class="submit-btn1">Update</button>
             </div>
             <div class="btn-item">
                 <button class="submit-btn23">
