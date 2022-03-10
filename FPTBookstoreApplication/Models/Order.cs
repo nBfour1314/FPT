@@ -26,8 +26,8 @@ namespace FPTBookstoreApplication.Models
         [Required(ErrorMessage = "Address delivery can not be empty")]
         public string Addressdilivery { get; set; }
 
-
         public virtual Account Account { get; set; }
+
         public ICollection<Orderdetail> Orderdetail { get; set; } 
     }
 }
